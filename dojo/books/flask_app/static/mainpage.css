@@ -1,0 +1,46 @@
+* {
+    margin: 10px;
+}
+
+.header{
+    margin: 10px;
+    padding: 5px;
+    text-align: center;
+    background-color: aliceblue;
+    border-radius: 10px;
+    box-shadow: darkgray 2px 2px;
+}
+
+#label {
+    text-align: center;
+    background-color: aliceblue;
+    border-radius: 10px;
+    box-shadow: darkgray 2px 2px;
+}
+
+.new {
+    justify-content: space-around;
+}
+
+.banner-label{
+    text-align: center;
+    background-color: rgb(248, 252, 255);
+    border-radius: 10px;
+    box-shadow: darkgray 1px 1px;
+}
+
+#italics {
+    font-style: italic;
+}
+
+#button {
+    background-color: rgb(66,133,244);
+    color: white;
+    padding: 7px;
+    border-radius: 10px;
+}
+
+.book-table {
+    text-align: center;
+    background-color: rgb(248, 252, 255);
+}

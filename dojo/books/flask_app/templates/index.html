@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authors</title>
+</head>
+<body>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <p>{{message}}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    <div class="header">
+        <h1>Book Database</h1>
+        <p id="italics">A place to come and log your favorite books and authors.</p>
+    </div>
+    <div class="new">
+        <form action="/new_author" method="post">
+            <div class="banner-label">
+                <h2>New Author</h2>
+                <p id="italics">Use the form below to add your favorite authors! Make sure you enter at least 3 characters.</p>
+            </div>
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name">
+            <input type="submit" name="" id="button">
+        </form>
+    </div>
+        <table>
+            <div class="banner-label">
+                <h2>All Authors</h2>
+                <p id="italics">Don't see your favorite author? Use the form above to add them!</p>
+                <p id="italics">Click on the artist to see their favorite books.</p>
+                {% for author in authors %}
+                <tbody>
+                    <tr>
+                        <td><a href="/view/{{author.id}}">{{author.name}}</a></td>
+                    </tr>
+                </tbody>
+                {% endfor %}
+            </div>
+        </table>
+    <a href="/new_book" id="button">Add Book</a>
+</body>
+</html>
